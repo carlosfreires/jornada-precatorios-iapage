@@ -1,0 +1,420 @@
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* VARIAVEIS E FONTES */
+:root {
+    --primary-color: #0056b3; /* Azul escuro (Justiça) */
+    --secondary-color: #007bff; /* Azul vibrante */
+    --accent-color: #ff9900; /* Laranja (Atenção/Destaque) */
+    --background-light: #f4f7fa;
+    --text-dark: #333;
+    --text-light: #fff;
+    --border-radius: 8px;
+    --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+    background-color: var(--background-light);
+}
+
+/* --- ESTILOS GERAIS --- */
+.section {
+    padding: 80px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- HEADER (HERO SECTION) --- */
+.hero-section {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #007bff 100%);
+    color: var(--text-light);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 20px;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.hero-content h1 {
+    font-size: 3.5em;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.5em;
+    font-weight: 300;
+    margin-bottom: 40px;
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    color: var(--text-light);
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.3s;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    background-color: #e68a00;
+    transform: translateY(-3px);
+}
+
+/* --- 2. FLOW DIAGRAM (Super Moderna e Reativa) --- */
+.flow-diagram {
+    background-color: var(--text-light);
+    padding-top: 100px;
+}
+
+.flow-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 15px;
+    margin: 50px 0;
+    position: relative;
+}
+
+.flow-step {
+    flex: 1;
+    background-color: var(--background-light);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    border-left: 5px solid var(--secondary-color);
+    box-shadow: var(--shadow-light);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+    min-height: 150px;
+}
+
+.flow-step i {
+    font-size: 2em;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+    display: block;
+}
+
+.flow-step h3 {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.flow-step:hover, .flow-step.active {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    border-left-color: var(--accent-color);
+}
+
+.flow-step.active i {
+    color: var(--accent-color);
+}
+
+.flow-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ccc;
+    font-size: 1.5em;
+    margin-top: 30px;
+}
+
+.explanation-box {
+    margin-top: 40px;
+    background-color: #e6f0ff;
+    border: 1px solid var(--secondary-color);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    text-align: left;
+    min-height: 80px;
+    transition: background-color 0.5s ease;
+}
+
+.explanation-box p {
+    margin: 0;
+    font-style: italic;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+/* --- 3. CARD SECTION --- */
+.card-section {
+    background-color: #fff;
+    border-top: 1px solid #eee;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.precatorio-card {
+    background-color: var(--background-light);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: left;
+    border-top: 5px solid;
+}
+
+.precatorio-card i {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+}
+
+.card-alimentar { border-top-color: #dc3545; }
+.card-alimentar i { color: #dc3545; }
+
+.card-comum { border-top-color: #17a2b8; }
+.card-comum i { color: #17a2b8; }
+
+.card-rpv { border-top-color: #28a745; }
+.card-rpv i { color: #28a745; }
+
+.precatorio-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.priority-box {
+    background-color: #fff3cd;
+    border: 1px solid #ffeeba;
+    padding: 25px;
+    border-radius: var(--border-radius);
+    text-align: left;
+}
+
+.priority-box h4 {
+    color: #856404;
+    font-size: 1.4em;
+    margin-bottom: 15px;
+}
+
+.priority-box ul {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.priority-box ul li {
+    font-weight: 600;
+    color: #856404;
+}
+
+.priority-box ul li i {
+    margin-right: 8px;
+    color: var(--accent-color);
+}
+
+
+/* --- 4. SIMULATOR SECTION (Reativa) --- */
+.simulator-section {
+    background-color: var(--background-light);
+}
+
+.simulator-box {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+.input-group {
+    margin-bottom: 30px;
+}
+
+.input-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+#valorPrevidencia {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.2em;
+    text-align: center;
+    transition: border-color 0.3s;
+}
+
+#valorPrevidencia:focus {
+    border-color: var(--secondary-color);
+    outline: none;
+}
+
+.options-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.option-card {
+    flex: 1;
+    min-width: 300px;
+    border: 1px solid #ddd;
+    padding: 25px;
+    border-radius: var(--border-radius);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.option-card h3 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.result-text {
+    font-weight: 700;
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+.alert-info {
+    color: #007bff;
+}
+
+.alert-warning {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+.disclaimer {
+    background-color: #f0f0f0;
+    border-left: 5px solid var(--accent-color);
+    padding: 15px;
+    margin-top: 30px;
+    text-align: left;
+    font-style: italic;
+    color: #666;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.disclaimer i {
+    margin-right: 10px;
+    color: var(--accent-color);
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: var(--primary-color);
+    color: #a0c3e8;
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer strong {
+    color: var(--accent-color);
+}
+
+/* --- RESPONSIVIDADE (MOBILE FIRST) --- */
+@media (max-width: 768px) {
+    .section {
+        padding: 60px 5%;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-content p {
+        font-size: 1.2em;
+    }
+
+    /* Flow Diagram Stack */
+    .flow-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .flow-arrow {
+        transform: rotate(90deg);
+        margin: 10px auto;
+    }
+
+    .flow-step {
+        text-align: center;
+    }
+    .flow-step i {
+        float: none;
+        margin-right: 0;
+    }
+
+    /* Card Grid Stack */
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .priority-box ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Animações (para o toque "Impressionante") */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-content h1, .hero-content p, .btn-primary {
+    opacity: 0;
+    animation: fadeIn 1.5s ease-out forwards;
+}
+.hero-content p { animation-delay: 0.5s; }
+.btn-primary { animation-delay: 1s; }

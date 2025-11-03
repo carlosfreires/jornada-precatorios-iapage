@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+:root{
+--primary-color:#0056b3;
+--secondary-color:#007bff;
+--accent-color:#ff9900;
+--background-light:#f4f7fa;
+--text-dark:#333;
+--text-light:#fff;
+--border-radius:8px;
+--shadow-light:0 4px 12px rgba(0,0,0,0.08);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Poppins',sans-serif;color:var(--text-dark);line-height:1.6;background-color:var(--background-light)}
+section{padding:80px 5%;max-width:1200px;margin:0 auto;text-align:center}
