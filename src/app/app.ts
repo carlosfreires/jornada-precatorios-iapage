@@ -12,5 +12,5 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './app.scss'
 })
 export class App {
-  protected readonly title = signal('equality-precatorios-iapage');
+  protected readonly title = signal('jornada-precatorios-iapage');
 }

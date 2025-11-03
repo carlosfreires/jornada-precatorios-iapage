@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "equality-precatorios-iapage": {
+    "jornada-precatorios-iapage": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -36,12 +36,12 @@
                 {
                   "type": "initial",
                   "maximumWarning": "500kB",
-                  "maximumError": "1MB"
+                  "maximumError": "2MB"
                 },
                 {
                   "type": "anyComponentStyle",
                   "maximumWarning": "4kB",
-                  "maximumError": "8kB"
+                  "maximumError": "20kB"
                 }
               ],
               "outputHashing": "all"
@@ -58,10 +58,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "equality-precatorios-iapage:build:production"
+              "buildTarget": "jornada-precatorios-iapage:build:production"
             },
             "development": {
-              "buildTarget": "equality-precatorios-iapage:build:development"
+              "buildTarget": "jornada-precatorios-iapage:build:development"
             }
           },
           "defaultConfiguration": "development"
